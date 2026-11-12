@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#0d1322">
   <meta name="robots" content="noindex">
   <title>Parceiro Chama Solar</title>
-  <link rel="icon" href="logo-cor.webp">
+  <link rel="icon" href="marca/logo-cor.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -56,7 +56,7 @@
 </head>
 <body>
 <main id="app">
-  <header><img src="logo-branco.webp" alt="Chama Solar" width="80" height="34"><span class="mini">Programa de parceiros</span></header>
+  <header><img src="marca/logo-branco.webp" alt="Chama Solar" width="80" height="34"><span class="mini">Programa de parceiros</span></header>
   <p class="mini">Carregando…</p>
 </main>
 <script>
@@ -70,7 +70,7 @@
   const nf = (v, d = 0) => (Number(v) || 0).toLocaleString('pt-BR', { maximumFractionDigits: d, minimumFractionDigits: d });
   const rpc = async (fn, corpo) => { const r = await fetch(SB + '/rest/v1/rpc/' + fn, { method: 'POST', headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json' }, body: JSON.stringify(corpo) }); const t = await r.text(); let j = null; try { j = t ? JSON.parse(t) : null; } catch { /* */ } if (!r.ok) throw new Error((j && (j.message || j.hint)) || 'Não consegui falar com a Chama Solar. Tente de novo.'); return j; };
   const guarda = { ler(k) { try { return sessionStorage.getItem(k); } catch { return null; } }, gravar(k, v) { try { sessionStorage.setItem(k, v); } catch { /* */ } } };
-  const topo = '<header><img src="logo-branco.webp" alt="Chama Solar" width="80" height="34"><span class="mini">Programa de parceiros</span></header>';
+  const topo = '<header><img src="marca/logo-branco.webp" alt="Chama Solar" width="80" height="34"><span class="mini">Programa de parceiros</span></header>';
   const token = new URLSearchParams(location.search).get('t') || '';
   const ST = { nova: 'Nova', em_contato: 'Em contato', proposta: 'Proposta enviada', ganho: 'Fechou! ✓', perdido: 'Não fechou' };
 
